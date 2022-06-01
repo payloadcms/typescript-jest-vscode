@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Jest Tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "--inspect-brk",
+        "${workspaceRoot}/node_modules/.bin/jest",
+        "--runInBand"
+      ],
+      "env": {
+        "PAYLOAD_CONFIG_PATH": "src/payload.config.ts"
+      },
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "env": {
+        "PAYLOAD_CONFIG_PATH": "src/payload.config.ts",
+      },
+      "program": "${workspaceFolder}/src/server.ts",
+    },
+  ]
+}
